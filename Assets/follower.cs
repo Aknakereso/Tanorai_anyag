@@ -22,23 +22,26 @@ public class follower : MonoBehaviour
 
 
         Vector3 direction = positionTarget - selfPosition;
-        //  direction.Normalize();
+        direction.Normalize();
 
+        
         /*
-
         float sinus = Mathf.Sin(Time.time) * sineFreq;
         sinus *= sinusAmp;
         sinus *= 1;
-        direction *= sinus;*/
+        direction *= sinus;
+        */
 
 
+       Vector3 velocity = direction * speed;
 
-        //  Vector3 velocity = direction * speed;
+       transform.position += velocity * Time.deltaTime; 
 
-        //  transform.position += velocity * Time.deltaTime; ;
 
+        
         transform.position = Vector3.MoveTowards(selfPosition,positionTarget,speed* Time.deltaTime);
 
+        
         if(direction != Vector3.zero)
         transform.rotation = Quaternion.LookRotation(direction);
 

@@ -7,7 +7,7 @@ public class forgas : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    { // a villogashoz
         transform.Rotate(0, angularSpeed * Time.deltaTime, 0);
         
 

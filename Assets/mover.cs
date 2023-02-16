@@ -15,7 +15,7 @@ public class mover : MonoBehaviour
 
 
 
-        //__________Forgas
+        
         
 
        
@@ -46,7 +46,7 @@ public class mover : MonoBehaviour
             z -= 1;
 
 
-Vector3 direction = new Vector3(x, 0, z);
+     Vector3 direction = new Vector3(x, 0, z);
         direction.Normalize();
 
         return direction;
@@ -68,13 +68,14 @@ Vector3 direction = new Vector3(x, 0, z);
 
         t.position = pos;
 
+        
         Quaternion rotation = t.rotation;
         t.rotation = Quaternion.LookRotation(direction);
 
         if (direction == Vector3.zero)
             t.rotation = Quaternion.LookRotation(direction);
 
-
+        
 
 
 
